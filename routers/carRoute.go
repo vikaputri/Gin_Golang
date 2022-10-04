@@ -1,7 +1,7 @@
 package routers
 
 import (
-	"belajargolang/Hacktiv8/Sesi6/controllers"
+	"github.com/vikaputri/Gin_Golang/controllers"
 
 	"github.com/gin-gonic/gin"
 )

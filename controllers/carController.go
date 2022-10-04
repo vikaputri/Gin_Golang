@@ -38,7 +38,7 @@ func GetCar(ctx *gin.Context) {
 	for i, car := range CarDatas {
 		if carID == car.CarID {
 			condition = true
-			carData == CarDatas[i]
+			carData = CarDatas[i]
 			break
 		}
 	}
@@ -69,8 +69,8 @@ func UpdateCar(ctx *gin.Context) {
 	for i, car := range CarDatas {
 		if carID == car.CarID {
 			condition = true
-			carDatas[i] = updateCar
-			CarDatas[i].CarID = CarID
+			CarDatas[i] = updateCar
+			CarDatas[i].CarID = carID
 			break
 		}
 	}
@@ -109,7 +109,7 @@ func DeleteCar(ctx *gin.Context) {
 		return
 	}
 
-	copy(CarDatas[carIndex:], CarDatas[carIndex+1])
+	copy(CarDatas[carIndex:], CarDatas[carIndex+1:])
 	CarDatas[len(CarDatas)-1] = Car{}
 	CarDatas = CarDatas[:len(CarDatas)-1]
 

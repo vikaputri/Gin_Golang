@@ -1,6 +1,6 @@
 package main
 
-import "belajargolang/Hacktiv8/Sesi6/routers"
+import "github.com/vikaputri/Gin_Golang/routers"
 
 func main() {
 	var PORT = ":8080"
